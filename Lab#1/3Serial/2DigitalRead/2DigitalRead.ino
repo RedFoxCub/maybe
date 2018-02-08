@@ -1,19 +1,19 @@
-// digital pin 8 has a pushbutton attached to it. Give it a name:
+// цифровой штырь 8 имеет прикрепленную к нему кнопку. Дайте ему имя:
 int pushButton = 8;
 
-// the setup routine runs once when you press reset:
+// процедура установки запускается один раз, когда вы нажимаете сброс:
 void setup() {
-  // initialize serial communication at 9600 bits per second:
+  // инициализировать последовательную связь со скоростью 9600 бит в секунду:
   Serial.begin(9600);
-  // make the pushbutton's pin an input:
+  // сделайте вывод кнопки:
   pinMode(pushButton, INPUT);
 }
 
-// the loop routine runs over and over again forever:
+// циклическая процедура работает снова и снова навсегда:
 void loop() {
-  // read the input pin:
+  // прочитайте входной контакт:
   int buttonState = digitalRead(pushButton);
-  // print out the state of the button:
+  // распечатайте состояние кнопки:
   Serial.println(buttonState);
-  delay(1);        // delay in between reads for stability
+  delay(1);        //задержка между чтением для стабильности
 }
